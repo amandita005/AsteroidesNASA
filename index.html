@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CodeInfo</title>
+    <meta name="author" content="AmandaFleck">
+    <meta name="description" content="Site para verificação de asteroides próximos">
+    <meta name="keywords" content="asteroides, nasa, datas, proximidade, perto">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
+    <script src="https://kit.fontawesome.com/2b984eeab0.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+    <header>
+        <nav>
+ 
+            <div class="nav-all-itens"  style="background-image: url(assets/logo\ 3.gif);">
+                <div class="logo-img"> <img src="" alt=""></div>
+                
+                <div class="nav-itens-text-desktop">
+                    <ul>
+                        <li><i><a href="https://eyes.nasa.gov/apps/asteroids/#/home">Asteroides</a></i></li> 
+                        <li><i><a href="https://www.nasa.gov/news/">Novidades</a></i></li>
+                        <li><i><a href="https://earthobservatory.nasa.gov">observatório da terra</a></i></li> 
+                        <li><i><a href="https://www.nasa.gov">nasa</a></i></li>
+                    </ul>
+                </div><!--itens-nav-->
+
+                <div class="nav-itens-text-mobile">
+                    <img  src="assets/menu.png" alt="menu">
+                    <ul>
+                        <li><i><a href="https://eyes.nasa.gov/apps/asteroids/#/home">Asteroides</a></i></li> 
+                        <li><i><a href="https://www.nasa.gov/news/">Novidades</a></i></li>
+                        <li><i><a href="https://earthobservatory.nasa.gov">observatório da terra</a></i></li> 
+                        <li><i><a href="https://www.nasa.gov">nasa</a></i></li>
+                    </ul>
+                </div><!--itens-nav-->
+
+
+
+                <div class="nav-name">
+                    <h2>Veja os Asteroides Próximos da terra</h2>
+                    <p>A partir de informaçoes da NASA</p>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+   
+    <section class="text-aste-back"> 
+
+        <div class="data-butons">
+        <label for="startDate">Data de Início:</label>
+        <input type="date" id="startDate" required>
+    
+        <label for="endDate">Data de Fim:</label>
+        <input type="date" id="endDate" required>
+
+        <div id="result"></div>
+        </div>
+
+        <div class="buttom-buscar">
+        <button id="fetchDataButton" class="glow-on-hover buttom-gerar" type="button">Buscar Dados</button>
+        </div>
+
+        
+
+
+       
+
+
+    <div class="text-aste" style="background-image: url(assets/ceu\ estrelado.gif);">
+        <h1 id="nome" class="text-prox-title">Os 10 asteroides mais próximos</h1>
+        <div class="all-aste-two" id="all-aste-two">
+            
+     </div>
+    </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            
+            <div class="buttom-nasa">
+               
+                    <h5>Vá para o site na nasa</h5>
+                    <a href="https://www.nasa.gov">Clique aqui</a>
+            
+            </div>
+
+                <div class="footer-text">
+                    <div class="w">
+                        <p>A NASA explora o desconhecido no ar e no espaço, 
+                        inova para o benefício da humanidade e inspira o
+                        mundo através da descoberta.</p>
+                    </div>
+                    <div class="w">
+                        <a href="https://www.nasa.gov/about/"> Sobre NASA's Mission</a>
+                    </div> 
+                </div>
+                
+                    
+                    <div class="footer-redes">
+                    <p>Follow NASA</p>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+       
+    </div>
+    </footer>
+    <!--javas-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+   <script>
+        $('.nav-itens-text-mobile img').click(function(){
+            $('.nav-itens-text-mobile ul').slideToggle();
+        });
+    </script>
+    <script src="aste.js"></script>
+</body>
+</html>

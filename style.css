@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ i{
+    color: white;
+ }
+
+.nav-all-itens{
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    position: relative;
+}
+
+.nav-name{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    width: 60%; 
+}
+.nav-name::after{
+    content: "";
+    width: 2px;
+    height: 260%;
+    background-color: aliceblue;
+    position: absolute;
+    top: -150%;
+    left: -50px;
+}
+.nav-name h2{
+    font-size: 60px;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.nav-name p{
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+.nav-itens-text-mobileli.selected{
+	background: #bdbcb9;
+}
+.nav-itens-text-desktop{
+    display: flex;
+}
+.nav-itens-text-desktop a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.nav-itens-text-mobile{
+    display: none;
+}
+
+.nav-itens-text-mobile a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.nav-itens-text-mobile img{
+    width: 40px; 
+    height: 40px;
+    margin-top: 12px;
+}
+.nav-itens-text-desktop ul{
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 30px;
+    list-style: none;
+    display: flex;
+}
+  
+.nav-itens-text-desktop li{
+   padding: 10px 10px;
+   position: relative;  
+}
+
+.nav-itens-text-desktop  a::after{
+    content: "";
+    height: 2px;
+    width: 95%;
+    background-color: aliceblue;
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    transition: all .5s;
+    transform: scale(0);
+    transform-origin: left;
+ }
+
+ .nav-itens-text-desktop a:hover::after{
+    transform: scale(1);
+ }
+
+ .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: 1px solid white;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ffffff, #002bff, #7a00ff, #ffffff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.text-aste-back{
+    background-color: #000;
+    padding-top: 1%; 
+    position: relative;
+    padding-bottom: 5%;
+}
+
+
+.text-aste{
+    color: #ffffff;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 35%;
+    padding: 3%;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 70px rgba(109, 97, 97, 0.8);
+    
+}
+.all-aste-two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.text-aste h1{
+    text-transform: uppercase;
+    font-size: 22px;
+    padding-bottom: 8px ;
+}
+
+.text-aste-prox{
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-aste li{
+    list-style: none;
+    padding: 8px;
+}
+
+.text-aste p{
+    padding: 4px;
+}
+
+.data-butons{
+    display: flex;
+    justify-content:center;
+    margin: 20px 20px;
+}
+
+.text-aste-back label{
+    color: white;
+    font-size: 17px;
+    padding: 5px 20px;
+    align-items: center;
+}
+
+.text-aste-back input{
+    width: 170px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 10px ;
+    font-size: 15px;
+}
+
+.buttom-buscar{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 20px 0 ;
+}
+
+.mudarText{
+    border-bottom: 1px solid white;
+}
+
+.footer-top{
+  
+    background-color: #000;
+    justify-content: center;
+    border-top: 1px solid white;
+    display: flex;
+    padding: 2% ;
+}
+
+.buttom-nasa-left{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.buttom-nasa-left::before{
+    content: "";
+    width: 90%;
+    height: 1px;
+   background-color: white;
+    position: absolute;
+    bottom: -50%;
+    left: 50px;
+}
+
+.buttom-nasa{
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   padding: 0 0 0 7%;
+}
+
+
+.buttom-nasa h5{
+font-size: 17px;
+color: white;
+text-transform: uppercase;
+align-items: center;
+text-align: center;
+padding-top: 8px;
+}
+
+
+.buttom-nasa a:hover{
+ color:#0c228b;
+ background-color: #fff;
+   
+}
+
+.buttom-nasa a{
+    color: white;    
+    width: 70%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 10px 0;
+    background-color: #0c228b;
+    align-items: center;
+    text-align: center; 
+    margin: 3% 0 0 12%;
+}
+
+.text-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-footer p{
+    color: white;
+    align-items: center;
+    text-align:justify;
+    padding: 0 20px;
+
+}
+.footer-text{
+    width: 70%;
+    padding: 0 40px ;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+.w{
+    width: 40%;
+    color: white;
+}
+
+.w a{
+    color: white;
+}
+
+
+.butom-missão{
+    background-color: red;
+    padding: 5%;
+    border-radius: 10px;
+
+}
+
+
+.footer-redes{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+}
+
+.footer-redes i{
+    padding: 0 10px;
+
+}
+
+.footer-text i{
+    padding: 0 0px ;
+
+}
+
+@media screen and (max-width: 800px) {
+
+.nav-itens-text-desktop{
+    display:  none;
+}
+    
+.nav-itens-text-mobile{
+    display: inline-block;
+}
+    
+.nav-itens-text-mobile ul{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 20px;
+    border-radius: 0 20px 20px 20px;
+    margin-top: 2px;
+    margin-right: 10%;
+    list-style: none;
+    padding-top: 10px;
+    border: 1px solid black;
+    backdrop-filter: blur(10px); /* Ajuste o valor para controlar a intensidade do desfoque */
+    background-color: rgba(255, 255, 255, 0); /* Define uma cor de fundo com transparência */
+}
+
+.nav-itens-text-mobile li{
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+.nav-itens-text-mobile img {
+    margin-right: 10px;
+}
+
+.nav-all-itens{
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    position: relative;
+}
+
+.nav-name h2{
+    font-size: 38px;
+}
+.nav-name p{
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.buttom-gerar{
+    margin: 5% 0 ;
+   
+}
+
+.text-aste{
+    width: 80%;
+    margin-left: 10%;
+    padding: 3%;}
+
+.text-aste h1{
+    padding: 5%;
+}
+
+
+.data-butons{
+    display: flex;
+   
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.text-aste-back label{
+    color: white;
+    font-size: 17px;
+    padding: 12px 10px;
+    align-items: center;
+}
+
+.text-aste-back input{
+    width: 170px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 10px ;
+    font-size: 15px;
+}
+
+.footer-top{
+  
+    background-color: #000;
+    justify-content: center;
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.buttom-nasa{
+   width: 100%;
+    padding: 0 0 0 0;
+}
+
+
+.footer-text{
+    width: 100%;
+    padding: 5% 40px ;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-redes{
+position: absolute;
+   top: 60%;
+   right: 50px;
+}
+
+.footer-redes i{
+    padding: 0 10px;
+   
+}
+
+
+}
