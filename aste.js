@@ -67,3 +67,7 @@ function formatDate(dateString) {
   return `${year}-${month}-${day}`;
 }
 
+  function reloadPage() {
+    location.reload();
+  }
+
